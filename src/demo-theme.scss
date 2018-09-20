@@ -1,0 +1,5 @@
+@import 'demo-colors';
+@include mat-core();
+
+$demo-theme: mat-light-theme($demo-primary, $demo-accent);
+@include angular-material-theme($demo-theme);

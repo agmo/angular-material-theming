@@ -1,4 +1,10 @@
+@import '../demo-colors';
+
 .button-row button,
 .button-row a {
   margin-right: 8px;
+}
+
+h1 {
+  color: mat-color($demo-primary, 900);
 }
