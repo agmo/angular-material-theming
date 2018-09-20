@@ -1,5 +1,25 @@
 @import 'demo-colors';
+
 @include mat-core();
 
 $demo-theme: mat-light-theme($demo-primary, $demo-accent);
 @include angular-material-theme($demo-theme);
+
+// An alternate light theme
+$demo-alternate-primary: mat-palette($mat-indigo);
+$demo-alternate-accent: mat-palette($mat-pink, A200, A100, A400);
+$demo-alternate-light-theme: mat-light-theme($demo-alternate-primary, $demo-alternate-accent);
+
+.demo-alternate-light-theme {
+  @include angular-material-theme($demo-alternate-light-theme);
+}
+
+// An alternate dark theme
+$demo-dark-primary: mat-palette($mat-blue-grey);
+$demo-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$demo-dark-warn: mat-palette($mat-deep-orange);
+$demo-dark-theme: mat-dark-theme($demo-dark-primary, $demo-dark-accent, $demo-dark-warn);
+
+.demo-dark-theme {
+  @include angular-material-theme($demo-dark-theme);
+}
