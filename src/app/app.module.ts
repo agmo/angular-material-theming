@@ -4,10 +4,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material';
 
 import {AppComponent} from './app.component';
+import {CustomDemoComponentComponent} from './custom-demo-component/custom-demo-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomDemoComponentComponent
   ],
   imports: [
     BrowserModule,

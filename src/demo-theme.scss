@@ -1,9 +1,16 @@
 @import 'demo-colors';
+@import 'app/custom-demo-component/_custom-demo-component-theme.scss';
 
 @include mat-core();
 
+// Add themes for all custom component here
+@mixin custom-themes($theme) {
+  @include custom-demo-component-theme($theme);
+}
+
 $demo-theme: mat-light-theme($demo-primary, $demo-accent);
 @include angular-material-theme($demo-theme);
+@include custom-themes($demo-theme);
 
 // An alternate light theme
 $demo-alternate-primary: mat-palette($mat-indigo);
@@ -12,6 +19,7 @@ $demo-alternate-light-theme: mat-light-theme($demo-alternate-primary, $demo-alte
 
 .demo-alternate-light-theme {
   @include angular-material-theme($demo-alternate-light-theme);
+  @include custom-themes($demo-alternate-light-theme);
 }
 
 // An alternate dark theme
@@ -22,4 +30,5 @@ $demo-dark-theme: mat-dark-theme($demo-dark-primary, $demo-dark-accent, $demo-da
 
 .demo-dark-theme {
   @include angular-material-theme($demo-dark-theme);
+  @include custom-themes($demo-dark-theme);
 }
