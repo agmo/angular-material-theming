@@ -3,7 +3,7 @@
 
 @include mat-core();
 
-// Add themes for all custom component here
+// Add themes for all custom components here
 @mixin custom-themes($theme) {
   @include custom-demo-component-theme($theme);
 }
